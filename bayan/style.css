@@ -1,0 +1,59 @@
+body {
+  background: #fafafa;
+}
+.bayan {
+  display: flex;
+  flex-direction: column;
+  max-width: 991px;
+  min-width: 320px;
+  margin: 50px auto;
+}
+.bayan-item {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #ffffff;
+}
+.bayan-item .bayan-item-title {
+  position: relative;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  font-size: 15px;
+  cursor: pointer;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.bayan-item .bayan-item-desc {
+  display: none;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333;
+  border-top: 1px dashed #ddd;
+  padding: 10px 20px 20px;
+  box-sizing: border-box;
+}
+.bayan-item input[type="checkbox"] {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+.bayan-item input[type="checkbox"]:checked ~ .bayan-item-desc {
+  display: block;
+}
+.bayan-item input[type="checkbox"]:checked ~ .bayan-item-title .icon:after {
+  content: "-";
+}
+.bayan-item input[type="checkbox"] ~ .bayan-item-title .icon:after {
+  content: "+";
+}
+.bayan-item:first-child {
+  margin-top: 0;
+}
+.bayan-item .icon {
+  margin-left: 14px;
+}
