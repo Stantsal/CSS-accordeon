@@ -12,7 +12,7 @@ h1 {
 .bayan {
   display: flex;
   flex-direction: column;
-  max-width: 991px;
+  max-width: 1200px;
   min-width: 320px;
   margin: 50px auto;
 }
@@ -34,65 +34,99 @@ h1 {
   padding: 14px 20px;
   box-sizing: border-box;
   align-items: center;
+  color: #004DFF;
+}
+.bayan-item .bayan-item-title :hover {
+  color: #333;
 }
 .bayan-item .bayan-item-desc {
-  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
   font-size: 14px;
   line-height: 18px;
   color: #333;
-  border-top: 1px dashed #ddd;
-  padding: 10px 20px 20px;
   box-sizing: border-box;
+  cursor: pointer;
+
 }
 .bayan-item input[type="checkbox"] {
   position: absolute;
   height: 0;
   width: 0;
   opacity: 0;
+  overflow: hidden;
 }
+
 .item-image1 {
   background-image: url(./assets/image/1.jpg);
   background-repeat: no-repeat;
   background-size: 60vh;
   background-position: center;
-  height: 70vh;
 }
 .item-image2 {
   background-image: url(./assets/image/2.jpg);
   background-repeat: no-repeat;
   background-size: 50vh;
   background-position: center;
-  height: 70vh;
 }
 .item-image3 {
   background-image: url(./assets/image/3.jpg);
   background-repeat: no-repeat;
   background-size: 60vh;
   background-position: center;
-  height: 70vh;
+
 }
 .item-image4 {
   background-image: url(./assets/image/4.jpg);
   background-repeat: no-repeat;
   background-size: 60vh;
   background-position: center;
-  height: 70vh;
 }
 .item-image5 {
   background-image: url(./assets/image/5.jpg);
   background-repeat: no-repeat;
   background-size: 60vh;
   background-position: center;
-  height: 70vh;
 }
 .bayan-item input[type="checkbox"]:checked ~ .bayan-item-desc {
   display: block;
+  height: 70vh;
+}
+.bayan-item input[type="checkbox"]:hover ~ .bayan-item-desc {
+  display: block;
+  height: 70vh;
+}
+.bayan-item-desc:hover {
+  display: block;
+  height: 70vh;
+}
+.bayan-item input[type="checkbox"] ~ .bayan-item-title .icon {
+  visibility: hidden;
+}
+.bayan:hover > .bayan-item .bayan-item-title {
+  color: #333;
+}
+.bayan:hover > .bayan-item input[type="checkbox"] ~ .bayan-item-title .icon {
+  visibility: visible;
+}
+.bayan-item input[type="checkbox"]:hover ~ .bayan-item-title .icon:after {
+  content: "-";
 }
 .bayan-item input[type="checkbox"]:checked ~ .bayan-item-title .icon:after {
   content: "-";
 }
+.bayan-item input[type="checkbox"]:checked ~ .bayan-item-title{
+  color: #333;
+}
 .bayan-item input[type="checkbox"] ~ .bayan-item-title .icon:after {
   content: "+";
+}
+.bayan-item-desc:hover ~ .bayan-item-title .icon {
+  content: "-";
+}
+.bayan-item input[type="checkbox"]:active ~ .bayan-item-title{
+  color:#004DFF;
 }
 .bayan-item:first-child {
   margin-top: 0;
@@ -100,30 +134,42 @@ h1 {
 .bayan-item .icon {
   margin-left: 14px;
 }
+
+@media (max-width: 1180px) {
+  h1 {
+    font-size: 36px;
+  }
+  .bayan-item .bayan-item-title {
+    font-size: 26px;
+}
+}
 @media (max-width:499px)  {
   h1 {
     font-size: 32px;
   }
-  .bayan-item-desc {
-    background-size: 37vh;
-    height: 46vh;
-  }
   .bayan-item .bayan-item-title {
     font-size: 22px;
 }
+.bayan-item-desc {
+  background-size: 50vh;
+}
+.bayan-item input[type="checkbox"]:checked ~ .bayan-item-desc {
+  height: 58vh;
+}
+
 }
 @media (max-width: 320px) {
   h1 {
     font-size: 32px;
   }
-  .bayan-item-desc {
-    background-size: 35vh;
-    height: 45vh;
-  }
   .bayan-item .bayan-item-title {
     font-size: 18px;
 }
-.bayan {
-  margin: 20px auto;
+.bayan-item-desc {
+  background-size: 35vh;
 }
+.bayan-item input[type="checkbox"]:checked ~ .bayan-item-desc {
+  height: 41vh;
+}
+
 }
