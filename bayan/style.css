@@ -93,14 +93,18 @@ h1 {
   display: block;
   height: 70vh;
 }
-.bayan-item input[type="checkbox"]:hover ~ .bayan-item-desc {
+@media (hover:hover) {
+  .bayan-item input[type="checkbox"]:hover ~ .bayan-item-desc {
   display: block;
   height: 70vh;
 }
-.bayan-item-desc:hover {
+}
+ @media (hover:hover) {
+  .bayan-item-desc:hover {
   display: block;
   height: 70vh;
 }
+  }
 .bayan-item input[type="checkbox"] ~ .bayan-item-title .icon {
   visibility: hidden;
 }
